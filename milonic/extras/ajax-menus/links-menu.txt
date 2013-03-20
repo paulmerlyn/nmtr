@@ -1,0 +1,8 @@
+with(milonic=new menuname("Links")){
+style=menuStyle;
+aI("text=Apache Web Server;url=http://www.apache.org/;");
+aI("text=MySQL Database Server;url=http://ww.mysql.com/;");
+aI("text=PHP - Development;url=http://www.php.net/;");
+aI("text=phpBB Web Forum System;url=http://www.phpbb.net/;");
+aI("showmenu=ajax:anti-spam-menu.txt;text=Anti Spam Tools;");
+}

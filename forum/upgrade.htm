@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Upgrade to SEO-Board 1.1.0</TITLE>
+<STYLE type="text/css">
+h1 {font-family: Tahoma, Verdana; font-size: 18px;}
+h2 {font-family: Tahoma, Verdana; font-size: 14px;}
+</STYLE>
+</HEAD>
+
+<BODY>
+<h1>How to upgrade from 1.1.0RC3 to 1.1.0</h1>
+<p>
+Upload these changed files:<br>
+index.php<br>
+admin.php<br>
+</p>
+
+<h1>How to upgrade from 1.1.0RC2 to 1.1.0RC3</h1>
+<p>
+Upload these changed files:<br>
+index.php<br>
+admin.php<br>
+/skin/userpanel.htm<br>
+/lang/eng.php
+</p>
+
+<h1>How to upgrade from 1.1.0RC to 1.1.0RC2</h1>
+<p>
+Simply upload the upgraded files:<br>
+index.php<br>
+vforum.php<br>
+admin.php (if you have renamed the admin file, upload it to the newer name)
+</p>
+
+<h1>How to upgrade from 1.04 to 1.1.0RC</h1>
+<p><b>Note: If you have a version older than 1.04, you need to first upgrade to 1.04.</b> Instructions are at the bottom half of this document.</p>
+<h2>1. Set the new options in seo-board_options.php file.</h2>
+<p>Version 1.1.0 adds new options in seo-board_options.php. They are related to signatures, avatars and the link nofollow attribute.</p>
+
+<p>Copy these lines from the new seo-board_options.php file to your seo-board_options.php:<br><br>
+<b>
+//ADDED IN 1.1.0<br>
+$signaturesandavatars = 1; // 0 - sigs and avatars disabled; 1 - sigs and avatars enabled<br><br>
+
+$maxsignaturesize = 350; // maximal signature size in chars<br>
+$maxavatarsize = 20000; // maximal avatar size in bytes<br>
+$maxavatarheight = 80; // maximal avatar height in pixels<br>
+$maxavatarwidth = 80;  // maximal avatar width in pixels<br><br>
+
+$avatardirectory = './avatars/'; //directory where the avatars will be uploaded. Must end with a '/'<br><br>
+
+$nofollow = 0; //0 - outgoing links normal; 1 - outgoing links with nofollow<br>
+</b></p>
+<h2>2. Avatar subdirectory</h2>
+<p>Create a directory named <b>avatar</b> within the main forum directory. Set its permission to 777, so that the script can write the avatar images in it.</p>
+<h2>3. Upgrade the database</h2>
+<p>Upload upgrade.php into your main forum directory, Run it and Finally, delete it.</p>
+<h2>4. Upload the new files</h2>
+<p>
+1. Upload the new smilies. Replace all the files in your /smilies/ subdirectory, with the new ones (including the images + php file).<br>
+2. Upload the new javascript file. Overwrite the /javascript/seo-board.js with the new one.<br>
+3. Upload the updated templates. Update<br>
+/skin/userpanel.htm<br>
+/skin/mainpostcell.htm<br>
+4. The new version has some tweaks in the design. If you want them upload the new /skin/styles.css.<br>
+5. Upload the new /lang/eng.php file. The new version has additional strings in it and older language packs won't work!<br>
+6. Upload the updated php files:<br>
+vtopic.php<br>
+/code/functions.php<br>
+index.php<br>
+usercp.php
+</p>
+<h2> THAT's ALL</h2>
+
+<h1>How to upgrade from 1.0x to 1.04 (Required For Older Versions Before Upgrading to 1.1.0)</h1>
+<h2>1. Set the new options in seo-board_options.php file.</h2>
+<p>Version 1.04 adds two new options in seo-board_options.php. They are related to rss/atom feeds. You can see the two additional options at the bottom of the 1.04 seo-board_options.php file.</p>
+<p>Copy these lines from the new seo-board_options.php file to your seo-board_options.php:<br><br>
+<b>
+//ADDED IN 1.04<br>
+//rss feed options<br>
+//exclude some forums from the rss/atom feeds<br>
+// = array (exclude_forum_id1, exclude_forum_id2...);<br>
+$feedexcludeforums = array();<br><br>
+
+//how many topics to include in the feeds<br>
+$feednumtopics = 10;</b>
+</p>
+<p>Customize these two additional values to your likings.</p>
+<h2>2. Upload the new files</h2>
+<p>There are 3 new files and 4 changed files from the previous versions.<br>
+New files: index.rss.php, index.atom.php and images/xml_rss.gif<br>
+Changed files: index.php, code/skinning.php, skin/mainheader.htm, skin/mainfooter.htm</p>
+<p>You need to upload the new and changed files. If you have done code and design customizations look at the exact changes below to figure out how to patch your forum. These simple changes are in order to facilitate the rss/atom feeds.</p>
+
+<h2>Changes in files</h2>
+<h3>Changes in skin/mainheader.htm</h3>
+<p>Added these two lines in the &lt;head&gt; section to specify the rss/atom feeds<br>
+<b>
+&lt;link rel="alternate" type="application/rss+xml" title="RSS 2.0 Feed" href="{$forumdir}index.rss.php" /&gt;<br>
+&lt;link rel="alternate" type="application/atom+xml" title="Atom 1.0 Feed" href="{$forumdir}index.atom.php" /&gt;
+</b>
+</p>
+<h3>Changes in skin/mainfooter.htm</h3>
+<p>Replaced this line:<br>
+<b>{$copyright}</b><br>
+with these lines:<br>
+<b>
+&lt;div class=footer&gt;<br>
+Powered by &lt;a href="http://www.seo-board.com"&gt;SEO-Board&lt;/a&gt; {$version}, &lt;img src="images/xml_rss.gif" alt="XML" title="RSS 2.0 feed" align="absmiddle"&gt; &lt;a href="index.rss.php"&gt;RSS 2.0&lt;/a&gt; &lt;img src="images/xml_rss.gif" alt="XML" title="Atom 1.0 feed" align="absmiddle"&gt; &lt;a href="index.atom.php"&gt;Atom 1.0&lt;/a&gt;<br>
+&lt;/div&gt;<br>
+</b>
+</p>
+<h3>Changes in index.php</h3>
+<p>At the top of index.php added a new line:<br>
+<b>$version = '1.04';</b><br><br>
+At the top of the index.php deleted this line:<br>
+<b>$start_time = explode(' ', microtime());</b><br><br>
+On the bottom of index.php delete these 4 lines:<br>
+<b>$end_time = explode(' ', microtime());<br>
+$total_time = round($end_time[1] + $end_time[0] - $start_time[1] - $start_time[0], 3);<br><br>
+
+$copyright = get_copyright();<br></b>
+</p>
+<h3>Changes in code/skinning.php</h3>
+<p>Deleted the whole get_copyright() function at the bottom of the file</p>
+
+</BODY>
+</HTML>

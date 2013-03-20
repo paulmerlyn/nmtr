@@ -1,0 +1,6 @@
+with(milonic=new menuname("Partners")){
+style=menuStyle;
+aI("text=(aq) Web Hosting;url=http://www.a-q.co.uk/;");
+aI("text=WebSmith;url=http://www.softidiom.com/?milonicmenu;");
+aI("text=SMS 2 Email;url=http://www.sms2email.com/;");
+}

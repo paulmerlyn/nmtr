@@ -1,0 +1,6 @@
+with(milonic=new menuname("Anti Spam Tools")){
+style=menuStyle;
+aI("text=Spam Cop;url=http://www.spamcop.net/;");
+aI("text=Mime Defang;url=http://www.mimedefang.org/;");
+aI("text=Spam Assassin;url=http://www.spamassassin.org/;");
+}

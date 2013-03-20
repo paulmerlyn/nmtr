@@ -1,0 +1,87 @@
+.smalltext {font-size: 10px; font-family: arial;}
+
+.forumpath {border: 1px #CCD7ED solid; font-size: 11px; padding: 6px 6px 6px 15px; color: #0018a5; background-color: #FFFFFF; font-weight: bold; margin-bottom: 10px; font-family: Geneva, tahoma, verdana;}
+.forumpath a {font-size: 11px; font-weight: bold; color: #0018a5;}
+
+.linkbutton {overflow: visible; border: 0px inset; background-color: transparent; font-family: Geneva, tahoma, arial, verdana; font-size: 11px; font-weight: bold; color: #9C151C; text-decoration: none; cursor: pointer; padding-left: 10px;}
+.linkbutton:hover{text-decoration:underline;}
+.inputtextbox {border-color: #9C151C; border-style: solid; border-width: 1px; height: 20px; font-size: 14px; color: #000000; }
+.inputbutton {height: 18px; margin: 0px; font-weight: bold; font-size: 12px; background-color: #9C151C; color: #FFFFFF; border-color: #9C151C; border-style: solid; border-width: 1px; vertical-align: bottom; font-family: Geneva, Arial, Helvetica, sans-serif;}
+
+.navtable {font-family: Geneva, tahoma, verdana, arial; border: 1px #CCD7ED solid; background-color: #FFFFFF; display: table; width: 100%; border-spacing: 0px; border-collapse: collapse;}
+.navtable td {padding: 3px;}
+.logtable {font-family: Geneva,  verdana, arial; font-size: 12px; width: 100%; border-spacing: 0px; border-collapse: collapse;}
+.logtable td {padding: 7px;}
+
+.formstyle {font-family: Geneva,  verdana, arial; margin: 0px; padding: 0px; display: inline;}
+.formfield {font-family: Geneva,  verdana, arial; font-size: 11px; background-color: #e5ecf9; border: #fff 1px solid; text-align: right; color: #000; width: 20%; font-weight: bold;}
+.formcell0 {font-family: Geneva,  verdana, arial; font-size: 12px; background-color: #F5F7FB; border: #fff 1px solid; text-align: left; color: #9C151C;}
+.formcell0 a {font-family: Geneva,  verdana, arial; color: #9C151C;}
+.formcell1 {font-family: Geneva,  verdana, arial; font-size: 12px; background-color: #F5F7FB; border: #fff 1px solid; text-align: left; color: #960;}
+.formcell1 a {font-family: Geneva,  verdana, arial; color: #9C151C;}
+.formtable {font-family: Geneva,  verdana, arial; display: table; width: 100%; border-spacing: 0px; border-collapse: collapse;  border: 1px #CCD7ED solid;}
+.formtable td {font-family: Geneva,  verdana, arial; padding: 5px 10px 5px 10px;}
+.formtitle {font-family: Geneva,  verdana, arial; border: 1px #fff solid; background-color: #9C151C; color: #fff; padding: 4px; font-size: 11px; font-weight: bold; padding-left: 10px;}
+.formtitle a {font-family: Geneva,  verdana, arial; color: #fff;}
+
+.error {padding: 5px; margin: 5px; color: red; background-color: #e5ecf9; border: #eee 1px dashed; display: block; text-align: center; font-weight: bold; font-size: 14px; font-family: Geneva, arial;}
+.message { padding: 20px; margin: 5px; color: #9C151C; background-color: #FFFFFF; border: #eee 1px dashed; display: block; text-align: center; font-weight: bold; font-size: 14px; font-family: Geneva, arial;}
+.message a {text-decoration: underline; font-family: Geneva, arial, verdana, tahoma; font-size: 12px; color: #9C151C;}
+
+.forumtable {font-family: Geneva,  verdana, arial; display: table; width: 100%; border: 1px #CCD7ED solid;}
+.forumtitle {font-family: Geneva,  Geneva,  verdana, arial; border: 1px #fff solid; background-color: #9C151C; color: #fff; padding: 5px; font-size: 11px; font-weight: bold; text-align: center;}
+.forumcell {font-family:  Geneva,  verdana, arial; padding: 5px 5px 5px 5px; font-size: 11px; border-left: 1px #fff solid; border-top: 1px #fff solid; border-bottom: 1px #eee solid; border-right: 1px #eee solid;}
+.forumcat {font-family: Geneva,  verdana, arial; border: 1px #fff solid; padding: 5px 5px 5px 10px; background-color: #FFFFFF; font-size: 14px; font-weight: normal; color: #fff;}
+.forumcat a {font-family: Geneva,  verdana, arial; font-weight: bold; font-size: 14px; color: #fff; text-decoration: none;}
+.forumlink {color: #9C151C; font-weight: bold; font-family: Geneva, Arial, Helvetica, sans-serif; text-decoration: none;}
+.forumrow0 {background-color: #F5F7FB;} /* Originally #F5F7FB*/
+.forumrow1 {background-color: #F5F7FB;} /* Originally #F5F7FB*/
+
+.pagination {font-family: Geneva, Verdana;  font-size: 11px; margin-top: 10px; margin-bottom: 10px; width: 100%; color: #000;}
+.pagination a {font-family: Geneva, Verdana;  font-size: 11px; text-decoration: underline; color: #000;}
+
+.bbbuttons {font-family: Geneva, times new roman, arial, verdana; border: 1px #fff solid; background-color: #F5F7FB;}
+table td .bbbuttons {padding: 10px;}
+.bbbuttons a {font-family: Geneva, times new roman, arial, verdana; padding: 2px 5px 2px 5px; font-size: 12px; border: 1px #9C151C solid; background-color: #F5F7FB; color: #9C151C; text-decoration: none;}
+
+.smiliesbar {margin: 5px 5px 5px 0px; font-family: Geneva, arial, verdana; border: 1px #fff solid; background-color: #F5F7FB;}
+.smiliesbar a {font-family: Geneva,  verdana, arial; margin: 2px; padding-bottom: 5px; font-weight: bold; color: #FFFFFF;}
+
+.smiliestable {display: table; width: 100%; border-spacing: 0px; border-collapse: collapse; border: 1px #CCD7ED solid;}
+.smiliecell {padding: 5px 5px 5px 30px; border: 1px #CCD7ED solid; background-color: #F5F7FB;}
+
+.code {border: 1px #000 solid; background-color: #000; color: #80FF80; padding: 10px; margin: 15px; font-size: 11px; font-family: verdana;}
+.quote {border: 1px #000 solid; background-color: #FEFEFE; color: #000; padding: 10px; margin: 15px; font-size: 11px; font-family: verdana;}
+
+.subforums {font-family: Geneva,  verdana, arial; padding-left: 5px;}
+.subforums a {font-size: 11px;}
+
+.topiclink {font-size: 11px; font-family: arial; font-weight: bold; text-decoration: underline; color: #9C151C;}
+sup .topiclink {font-family: Geneva, arial, tahoma; text-decoration: none; font-size: 12px; font-weight: normal;}
+
+.topictable {font-family: Geneva,  verdana, arial; display: table; width: 100%; border: 1px #CCD7ED solid; }
+.topictitle {border: 1px #fff solid; background-color:#9C151C; color: #FFF; padding: 5px; font-size: 10px; font-weight: bold; text-align: center; font-family: Geneva, verdana;}
+.topiccell {padding: 5px 5px 5px 5px; border-left: 1px #fff solid; border-top: 1px #fff solid; border-bottom: 1px #eee solid; border-right: 1px #eee solid; font-size: 11px;}
+.topicrow0 {background-color: #F5F7FB;}
+.topicrow1 {background-color: #F5F7FB;}
+
+.topiccommands {font-family: Geneva,  verdana, arial; font-size: 11px; text-align: center; background-color: #9C151C; padding-top: 5px; padding-bottom: 5px; color: #fff;}
+.topiccommands a {font-size: 11px; font-weight: bold; color: #fff;}
+
+.posttable {font-family: Geneva,  verdana, arial; display: table; width: 100%; border-spacing: 0px; margin-bottom: 5px; border: 1px #CCD7ED solid;}
+.posttitle {background-color: #9C151C; color: #fff; padding: 4px; font-size: 11px;}
+.posttitle a {color: #fff;}
+.postauthor {background-color: #FFFFFF; padding: 2px 10px 2px 10px; font-size: 11px;}
+.postrow0 {background-color: #F5F7FB;}
+.postrow1 {background-color: #F5F7FB;}
+.posttext {padding: 10px; font-family: Geneva, verdana, arial, verdana; font-size: 11px; border: 1px #fff solid; line-height:18px;}
+
+.memberbutton {display: inline; overflow: visible; border: 0px inset; background-color: transparent; font-family: Geneva, arial, verdana; font-size: 14px; font-weight: bold; color: #c30; text-decoration: underline; cursor: pointer; padding: 0px; margin: 0px;}
+.selectbox {font-size: 12px; font-family: Geneva, arial; font-weight: bold; }
+.footer {font-family: Geneva,  verdana, arial; font-size: 11px; text-align: center; margin-top: 10px;}
+.footer a {font-size: 11px; color: #0018a5;}
+
+.statstable {font-family: Geneva,  verdana, arial; display: table; width: 100%; margin-bottom: 5px; border: 1px #CCD7ED solid; margin-top: 20px;}
+.statstitle {font-family: Geneva,  verdana, arial; background-color: #000; color: #fff; padding: 4px; font-size: 11px;}
+.statscell {font-family: Geneva,  verdana, arial; font-size: 11px; background-color: #F5F7FB; padding: 10px;}
+

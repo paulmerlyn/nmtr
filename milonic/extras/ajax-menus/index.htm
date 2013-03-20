@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Milonic DHTML/JavaScript Ajax Menu Sample Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+</head>
+<body>
+		
+<!--
+	 Milonic DHTML Website Navigation Menu Version 5.0+
+	 Copyright 2007 (c) Milonic Solutions Limited (UK). All Rights Reserved.
+	 Please visit http://www.milonic.com/ for more information.
+
+	 Although this software may have been freely downloaded, you must obtain a license before using it in any production environment.		 
+	 The free use of this menu is only available for Non-Profit, Educational & Personal Web Sites who have obtained a license to use. 
+	 
+	 Free, Commercial and Corporate Licenses are available from our website.
+	 You also need to include a link back to http://www.milonic.com/ if you use the free license.
+	 
+	 All Copyright notices MUST remain in place at ALL times. 
+	 This includes the first three lines of this notice on every page that uses the menu.
+	 If you cannot comply with all of the above requirements, please contact us to arrange a license waiver.
+-->	
+
+<!-- ***** This is the section of code you need to paste into your web pages ***** -->
+<script type="text/javascript" src="../../milonic_src.js"></script>	
+<script type="text/javascript" src="../../mmenudom.js"></script>
+<script type="text/javascript" src="mm_browserapi.js"></script>
+<!-- The next file contains your menu data, links and menu structure etc -->
+<script type="text/javascript" src="menu_data.js"></script>	
+<!-- **** JavaScript Menu HTML Code -->
+
+<BR>
+<BR>
+<BR>
+<BR>
+Here is our Ajax Based Menus<BR>
+<BR>
+They are incredibly easy to use, all you need to do is declare a &ltscript> Reference to the file mm_browserapi.js inside your HTML, this should go just after the reference to mmenudom.js.
+<br>
+<br>
+Then, you call your ajax files using a menu item similar to this: <b>aI("showmenu=ajax:my-milonic-menu.txt;text=My Milonic;");<</b>br>
+<br>
+The contents of the file samples-menu.txt is as follows, but could be dynamically written using any server side scripting language such as PHP, ASP, Cold Fusion or JSP etc etc:<br>
+<br>
+<b>
+with(milonic=new menuname("MyMilonic")){<br>
+style=menuStyle;<br>
+aI("text=Login;url=http://www.milonic.com/login.php;");<br>
+aI("text=Licenses;url=http://www.milonic.com/mylicenses.php;");<br>
+aI("text=Invoices;url=http://www.milonic.com/myinvoices.php;");<br>
+aI("text=Make Support Request;url=http://www.milonic.com/reqsupport.php;");<br>
+aI("text=View Support Requests;url=http://www.milonic.com/mysupport.php;");<br>
+aI("text=Your Details;url=http://www.milonic.com/mydetails.php;");<br>
+}<br>
+</b>
+<BR>
+<BR>
+Here is a list of the files you need:<br>
+<br>
+<a href=http://www.milonic.com/milonic_src.js>http://www.milonic.com/milonic_src.js</a><br>
+<a href=http://www.milonic.com/mmenudom.js>http://www.milonic.com/mmenudom.js </a><br>
+<a href=http://www.milonic.com/mm_browserapi.js>http://www.milonic.com/mm_browserapi.js </a><br>
+<a href=http://www.milonic.com/ajaxmenus/anti-spam-menu.txt>http://www.milonic.com/ajaxmenus/anti-spam-menu.txt </a><br>
+<a href=http://www.milonic.com/ajaxmenus/links-menu.txt>http://www.milonic.com/ajaxmenus/links-menu.txt </a><br>
+<a href=http://www.milonic.com/ajaxmenus/milonic-menu.txt>http://www.milonic.com/ajaxmenus/milonic-menu.txt </a><br>
+<a href=http://www.milonic.com/ajaxmenus/my-milonic-menu.txt>http://www.milonic.com/ajaxmenus/my-milonic-menu.txt </a><br>
+<a href=http://www.milonic.com/ajaxmenus/partners-menu.txt>http://www.milonic.com/ajaxmenus/partners-menu.txt </a><br>
+<a href=http://www.milonic.com/ajaxmenus/samples-menu.txt>http://www.milonic.com/ajaxmenus/samples-menu.txt </a><br>
+<a href=http://www.milonic.com/ajaxmenus/menu_data.js>http://www.milonic.com/ajaxmenus/menu_data.js </a><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<a href=http://www.milonic.com/>JavaScript Menu Powered by Milonic</a>
+</body>
+</html>

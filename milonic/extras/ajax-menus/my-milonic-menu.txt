@@ -1,0 +1,9 @@
+with(milonic=new menuname("MyMilonic")){
+style=menuStyle;
+aI("text=Login;url=http://www.milonic.com/login.php;");
+aI("text=Licenses;url=http://www.milonic.com/mylicenses.php;");
+aI("text=Invoices;url=http://www.milonic.com/myinvoices.php;");
+aI("text=Make Support Request;url=http://www.milonic.com/reqsupport.php;");
+aI("text=View Support Requests;url=http://www.milonic.com/mysupport.php;");
+aI("text=Your Details;url=http://www.milonic.com/mydetails.php;");
+}

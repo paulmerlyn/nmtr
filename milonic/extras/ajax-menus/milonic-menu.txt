@@ -1,0 +1,10 @@
+with(milonic=new menuname("Milonic")){
+style=menuStyle;
+aI("text=Product Purchasing Page;url=http://www.milonic.com/cbuy.php;");
+aI("text=Contact Us;url=http://www.milonic.com/contactus.php;");
+aI("text=Newsletter Subscription;url=http://www.milonic.com/newsletter.php;");
+aI("text=FAQ;url=http://www.milonic.com/menufaq.php;");
+aI("text=Discussion Forum;url=http://www.milonic.com/forum/;");
+aI("text=Software License Agreement;url=http://www.milonic.com/license.php;");
+aI("text=Privacy Policy;url=http://www.milonic.com/privacy.php;");
+}

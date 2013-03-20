@@ -1,0 +1,12 @@
+Sitemap: http://www.mediationtrainings.org/sitemap.xml
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: *
+Sitemap: http://www.mediationtrainings.org/sitemap.xml
+Disallow: /Templates/
+Disallow: /milonic/
+Disallow: /ssi/
+Disallow: /scripts/
+Disallow: /images/

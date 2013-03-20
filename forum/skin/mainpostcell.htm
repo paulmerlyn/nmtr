@@ -1,0 +1,23 @@
+<table class=posttable cellspacing=0>
+<tr>
+<td class=posttitle colspan=2 nowrap>{$posted_on} {$user_ip} {$edited_by}</td>
+<td class=posttitle align=right width="100%">{$post_actions}</td>
+</tr>
+<tr class=postauthor>
+<td style="{$avatar_style}">
+{$author_avatar}
+</td>
+<td class=postauthor align=left nowrap width="100%">
+{$posted_by}<br>{$user_type}{$author_online}
+</td>
+<td class=postauthor align=right nowrap>
+{$author_num_posts}<br>
+{$author_reg_date}
+</td>
+</tr>
+<tr class=postrow{$cell_iterator}>
+<td class=posttext valign=top colspan=3>
+{$post_message}
+</td>
+</tr>
+</table>

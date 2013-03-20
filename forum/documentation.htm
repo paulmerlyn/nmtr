@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>SEO-Board Documentation</TITLE>
+<STYLE type="text/css">
+h1 {font-family: Tahoma, Verdana; font-size: 18px;}
+h2 {font-family: Tahoma, Verdana; font-size: 14px;}
+</STYLE>
+</HEAD>
+
+<BODY>
+<p>Note: These are Installation and Configuration Instructions for SEO-Board 1.1.0 versions.<br>
+<b><u>If you are upgrading from older versions look at the upgrade.htm file in your SEO-Board directory.</u></b></p>
+<h1>Installation</h1>
+<p>1. Create a MySQL database. Use the web based MySQL admin provided by your hosting provider.<br>Or use the plain SQL command: <b>create database DatabaseName;</b></p>
+<p>2. Unzip the SEO-Board zip file and upload all files and subdirectories.</p>
+<p>3. Set up all options in the file <b>seo-board_options.php</b> . Here's a list of all variables you need to setup in order to install the board:</p>
+<ul>
+<li><b>$dbhost = 'localhost';</b> Host name for connecting to the MySQL database. Most probably it is localhost.</li>
+<li><b>$dbname = 'seo_board';</b> The name of the MySQL database you've created for the board.</li>
+<li><b>$dbuser = 'username';</b> MySQL username for accessing the database.</li>
+<li><b>$dbpass = 'password';</b> MySQL account password.</li>
+<li><b>$dbpref = 'seo_board_';</b> Prefix added to all table names. You don't have to change it.</li>
+<li><b>$adminfile = 'admin.php';</b> Name of the script file that provides all admin functions. I advise you to rename the admin.php file to something hard to guess and provide the name in this field.</li>
+<li><b>$adminuser = 'adminusername';</b> Admin username. It is used only during installation to create the admin account in the database.</li>
+<li><b>$adminpass = 'adminpassword';</b> Admin password.</li>
+<li><b>$adminemail = 'admin@yoursite.com';</b> Admin email. This email is used to send out all board emails.</li>
+<li><b>$forumhome = 'link to forum home';</b> Link to the main forum page. It can be http://www.domain.com or http://www.domain.com/index.php or another if you rename index.php</li>
+<li><b>$forumdir = 'forum directory';</b> The directory holding the main script file. Used for link generating purposes. Must start with http:// end with '/'. Example: http://www.yourdomain.com/forum/ or http://forums.yourdomain.com/</li>
+<li><b>$forumscript = 'link to main forum script file';</b> Full link to the main script file (index.php or other if you rename it). Example: http://www.yoursite.com/forums.php or http://www.yoursite.com/forum/index.php</li>
+</ul>
+<p>4. Run the installation script from your browser (install.php). Example: http://www.yoursite.com/forum/install.php<br>
+If you have set all user/password fields above correctly, you should get 'Forum Installed Successfully!' message. If something is not configured, you'll get the specific MySQL error.</p>
+<p>5. <b>Delete install.php</b> from your site! If you don't someone can run it.</p>
+<p>6. Access your forum from a web browser. Use the admin username and password to login. You will see a link to the admin panel.</p>
+<h1>Create your forums</h1>
+<p>In the admin panel create all forums and forum categories. It is pretty straightforward.</p>
+<h1>Customize all variables in seo-board_options.php</h1>
+<p>seo-board_options.php contains many other variables that control the functionality of the board. Now's the time to set them right.</p>
+<ul>
+<li><b>$cookiedomain = '';</b> Cookie setting that you won't have to change. If there's a problem try setting it to your domain name without 'http://'. Example: www.yoursite.com</li>
+<li><b>$cookiename = 'seo-board';</b> Name of the cookie used for user login purposes. You don't need to change it.</li>
+<li><b>$cookiepath = '';</b> Another cookie setting. Leave it like that.</li>
+<li><b>$cookiesecure = FALSE;</b> Another cookie setting. Leave it like that.</li>
+<li><b>$enablegzip = 0;</b> GZIP compression 0-disabled; 1-enabled. If you enable this option, you save some bandwidth but use more server CPU power.</li>
+<li><b>$visittimeout = 600;</b> Visit timeout in SECONDS. If this time passes and you haven't read any post (since last reading a post), forum will think you are starting a new session. All topics with new posts since then will have a "new" indicator. That way you'll know all topics that got replies since your last visit.</li>
+<li><b>$usereditposttimeout = 1200;</b> Time is in SECONDS. When a user posts, he/she will be able to edit his/her post unless this time passes. If you set it to 0, users won't be able to edit their posts at all.</li>
+<li><b>$forumtimezone = 2;</b> Default time zone for guest visitors.</li>
+<li><b>$registermode = 1;</b> 1- register new users immediately; 0- send an email with generated password</li>
+<li><b>$forumtitle = 'SEO-Board Forums';</b> Your forum title. Don't set this to a too long title.</li>
+<li><b>$lang = 'eng';</b> Forum language. All language packs are kept in the /lang/ subdirectory. 'eng' means eng.php which contains the English language pack. If you have a russian language pack ru.php, you need to set this to 'ru'.</li>
+<li><b>$invalidusernames = array('Anonymous', 'Guest');</b> Forbid users from registering with these names.</li>
+<li><b>$maxwordlength = 60;</b> Maximal word length allowed in posts.</li>
+<li><b>$maxpostlength = 20000;</b> Maximal characters per post.</li>
+<li><b>$postsperpage = 30;</b> Show how many posts per page.</li>
+<li><b>$topicsperpage = 20;</b> Show how many topics per page.</li>
+<li><b>$searchresultsperpage = 30;</b> Show how many search results per page.</li>
+<li><b>$searchexpiretime = 600;</b> Leave this alone.</li>
+<li><b>$showforumstats = 1;</b> 1- show forum statistics on main forum page; 0- don't show forum stats.</li>
+<li><b>$showlastposts = 1;</b> 1- forum will show a list of topics with the last N posts on main forum page. 0- don't show this.</li>
+<li><b>$shownumlastposts = 30;</b> If above is set to 1, forum will show the topics with the last $shownumlastposts posts.</li>
+<li><b>$lastpostsexclude = array();</b> Provide the forum IDs of all forums that you don't want to participate in "Latest Forum Posts". Example: =array(1, 4); means you don't want topics from forums with IDs 1 and 4 to participate in the "Latest Forum Posts"</li>
+<li><b>$datetimeformat = 'd M Y H:i';</b> Date/Time Format.</li>
+<li><b>$dateformat = 'd M Y';</b> Date format.</li>
+<li><b>$shortdateformat = 'M Y';</b> Shorter Date Format.</li>
+<li><b>$antispam = 5;</b> Users are disallowed from posting within this number of seconds after making a post. Set it to 0 and users will be able to flood the forum with posts.</li>
+<li><b>$nofollow = 0;</b> 0 - All outgoing links (forum + signatures) normal; 1 - Outgoing links (forum + signatures) with the rel="nofollow" tag</li>
+</ul>
+<h1>Setting up Signatures and Avatars</h1>
+<p>Set these options in seo-board_options.php</p>
+<ul>
+<li><b>$signaturesandavatars = 1;</b> 0 - signatures and avatars are disabled; 1 - signatures and avatars are enabled</li>
+<li><b>$maxsignaturesize = 350;</b> Maximal signature size in characters</li>
+<li><b>$maxavatarsize = 20000;</b> Maximal avatar image size in bytes</li>
+<li><b>$maxavatarheight = 80;</b> Maximal avatar image height in pixels</li>
+<li><b>$maxavatarwidth = 80;</b>  Maximal avatar image width in pixels</li>
+<li><b>$avatardirectory = './avatars/';</b> Subdirectory where the avatars will be uploaded. Must end with a '/'</li>
+</ul>
+<p>Set the avatar subdirectory permissions to 777, in order to give permission to the script to upload files there.</p>
+<h1>Setting Special Forum Options</h1>
+<p>SEO-Board supports special forums (private, readonly..). This is set in seo-board_options.php using php arrays. Forums are identified by their Forum IDs as kept in the database. To find the ForumID of a forum click on it and you'll see the ID in the URL (as f=id or forumid.htm). SEO-Board uses seo-board_options.php to store all these options in order to save database queries and speed the forum script up maximally.</p>
+<ul>
+<li><b>$privateforums = array();</b> If you want to have private forums this array is the place to set it. Format: =array(privateforumID => (alloweduserID1, alloweduserID2..));<br>
+Example: $privateforums = array(7 => array(5, 12, 1277)); will make forum with ID 7 private and only admin and users with IDs 5, 12 and 1277 will see this forum.</li>
+<li><b>$readonlyforums = array();</b> Make some forums read only (only admin will be able to post). Format: = array(readonly_forum_id, readonly_forum_id2);<br>
+Example: $readonlyforums = array(1, 5); will make forums with ID 1 and 5 read only.</li>
+<li><b>$postonlyforums = array();</b> Make some forums post only (only admin will be able to create topics). Format: = array(postonly_forum_id, postonly_forum_id2..);<br>
+Example: $postonlyforums = array(11); will make forum with ID 11 post only.</li>
+<li><b>$guestscanpostforums = array();</b> By default guest cannot post. They must register/login. This option will allow some forums to allow anonymous posting. Format: = array(guestcanpost_forum_id1, guestcanpost_forum_id2..);<br>
+Example: $guestscanpostforums = array(4, 13); will allow guests to posts in forums with IDs 4 and 13.</li>
+<li><b>$allowhtmlforums = array();</b> Allow HTML tags in some forums. Format: = array(allowedhtmlforumid1,...);<br>
+Example: $allowhtmlforums = array(5); will allow posting of HTML tags in forum with ID 5.</li>
+<li><b>$articleforums = array ();</b> This options sets forums that show all topics sorted by time of creation (not by time of last post). Format: = array(forumid1, forumid2..);<br>
+Example: $articleforums = array (16); Forum with ID 16 will be sorted by time of topic creation.</li>
+</ul>
+<h1>Setting Moderators</h1>
+<p>You can assign moderators to every forum. These options are set in seo-board_options.php to avoid unnecessary queries to the database. You need to know the Forum IDs and User IDs of the moderators. To find the User ID of a user click on his/her user profile and the ID will appear in its URL.</p>
+<ul>
+<li><b>$showmoderators = 0;</b> 0- don't show a moderators list; 1- show a moderators list on each forum.</li>
+<li><b>$moderators = array();</b> This array will set the moderators of every forum. Format: = array(forum1ID => array(moderatorID => 'ModeratorName', moderatorID2 => 'ModeratorName2'), forum2ID => array(ModeratorID => 'ModeratorName...;<br>
+Example: $moderators = array(1 => array(34 => 'Peter', 123 => 'John')); This will set users with IDs 34, 123 moderator rights on forum with ID 1.</li>
+</ul>
+<h1>Setting Up the RSS/Atom Feeds</h1>
+<ul>
+<li><b>$feedexcludeforums = array();</b> If you want to exclude some forums from the feeds list their forum IDs here. SEO-Board will exclude private to the guest visitor forums by default.<br>
+Example: $feedexcludeforums = array(3, 6); This will exclude topics from forums with IDs 3 and 6 from the rss/atom feeds
+</li>
+<li><b>$feednumtopics = 10;</b> Sets the number of topics to put in the feeds</li>
+</ul>
+<h1>Apache Mod-Rewrite Support</h1>
+<p>If you want to use search engine friendly URLs read this section. Instead of having an URL like index.php?a=vtopic&amp;t=12, you can have topic12.htm This will work only on Apache.</p>
+<p>1. In seo-board_options.php set the $modrewrite variable to 1 ($modrewrite = 1;). Now SEO-Board will generate search engine friendly URLs.</p>
+<p>2. Put the mod_rewrite rules in the .htaccess file in your forum directory. See the htaccess_example.txt file for the default way to do it:<br>
+RewriteEngine On<br>
+RewriteRule ^forum([0-9]+)\.htm$ ./index.php?a=vforum&f=$1<br>
+RewriteRule ^forum([0-9]+)-([0-9]+)\.htm$ ./index.php?a=vforum&f=$1&p=$2<br>
+RewriteRule ^article([0-9]+)\.htm$ ./index.php?a=vtopic&t=$1<br>
+RewriteRule ^article([0-9]+)-([0-9]+)\.htm$ ./index.php?a=vtopic&t=$1&p=$2<br><br>
+You may need to make some changes to the above text (like include the path to the forum files or sth else)
+</p>
+<h1>Skin your Board</h1>
+<p>Colors, borders etc. are kept in style.css file in your /skin/ subdirectory. Edit the file to change colors/borders etc.</p>
+<p>All HTML is kept in files in the /skin/ subdirectory. Edit the HTML files to make changes to the overall design. Files: main_header.htm and main_footer.htm are common to all forum pages and you can edit them to make your forum fit into your site's design.<br>
+To find which HTML template file you need to edit, view the HTML source of a page and you'll see the start and end of each template. Example: &lt;!-- START: mainguestnavigation --&gt; means start of mainguestnavigation.htm template.</p>
+<h1>Smilie Support</h1>
+<p>Smilie info is kept in /smilies/smilies.php file. Array $sm_search contains the smilie text codes and $sm_replace the path to the corresponding smilie image. Edit these 2 arrays to change the installed smilies.<br>
+The $barsmilies variable specifies how many smilies should be shown on the smilie bar (when you make posts). If there are more smilies than shown, SEO-Board inserts a link "All Smilies" that runs a popup showing all smilies.<br>
+To change the way the popup shows all smilies edit smilies_popup.php</p>
+<h1>License Agreement</h1>
+<p>1. I am not responsible for anything that happens by the usage of SEO-Board (except high search engine traffic, great speed and satisfied forum users)<br>
+2. You can edit/customize the forum, use it free for personal/commercial sites.<br>
+3. You can use parts of the code in your own applications.<br>
+4. You <b>cannot</b> rebrand and sell SEO-Board.</p>
+<h1>Got Questions? Need Help?</h1>
+<p>I will be happy to help you. Ask your questions on the <a href="http://forums.seo-board.com">community forums</a>.</p>
+<br>
+Best,<br>
+Hristo Hristov
+
+</BODY>
+</HTML>

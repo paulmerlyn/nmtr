@@ -1,0 +1,30 @@
+{$errormessage}
+<form action="{$forumscript}?a=search" method=post name=SForm class=formstyle>
+<table class=formtable>
+<tr>
+<td colspan=2 class=formtitle>&nbsp;&nbsp;<a href="{$forumhome}">{$forumtitle}</a> &raquo; {$lang['search']}</td>
+</tr>
+<tr>
+<td class=formfield>{$lang['search_for']}</td><td class=formcell0><input class=inputtextbox type=text name=s size=30 maxlength=100></td>
+</tr>
+<tr>
+<td class=formfield>{$lang['search_forums']}</td><td class=formcell1>{$searchforums}</td>
+</tr>
+<tr>
+<td class=formfield rowspan=2>{$lang['search_options']}</td>
+<td class=formcell0><input type=checkbox name=postsby value=1>{$lang['posts_by']}&nbsp;&nbsp;<input class=inputtextbox type=text name=postauthor size=20 maxlength=30></td>
+</tr>
+<tr>
+<td class=formcell1>
+<input type=checkbox name=postsage value=1>{$lang['post_age']} <select class=selectbox style="height: 20px;" name=timeselect>
+<option value=0 selected=selected>{$lang['newer']}</option>
+<option value=1>{$lang['older']}</option>
+</select>&nbsp; {$lang['than']} <input class=inputtextbox type=text name=sdays size=2 maxlength=10> {$lang['days_ago']}
+</td>
+</tr>
+<tr>
+<td class=formfield>&nbsp;</td>
+<td class=formcell0><input class=inputbutton type=submit name=search value="{$lang['search']}"></td>
+</tr>
+</table>
+</form>
