@@ -54,9 +54,9 @@ if ($_SESSION['phpinvalidflag'] != true)
 {
 
 // Connect to DB
-$db = mysql_connect('localhost', 'paulme6_merlyn', 'fePhaCj64mkik')
+$db = mysql_connect('localhost', '', '')
 or die('Could not connect: ' . mysql_error());
-mysql_select_db('paulme6_medtrainers') or die('Could not select database: ' . mysql_error());
+mysql_select_db('') or die('Could not select database: ' . mysql_error());
 
 // Create short variable names for this (already validated by simplesearch_slave.php) user input data
 if (isset($_SESSION['SSzipcode'])) $SSzipcode = $_SESSION['SSzipcode']; else unset($SSzipcode);
