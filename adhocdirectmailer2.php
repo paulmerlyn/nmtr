@@ -4,7 +4,7 @@ adhocdirectmailer1.php sends a direct mail message to addressees from the databa
 */
 
 // Connect to my mysql database.
-$db = mysql_connect('localhost', 'paulme6_merlyn', 'fePhaCj64mkik')
+$db = mysql_connect('localhost', 'paulme6_merlyn', '')
 or die('Could not connect: ' . mysql_error());
 mysql_select_db('paulme6_medtrainers') or die('Could not select database: ' . mysql_error());
 
