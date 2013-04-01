@@ -374,7 +374,7 @@ require('ssi/adminmenu.php'); // Include the navigation menu.
 $_SESSION['selectedID'] = $_POST['selectedID']; // Save the selected ID of the trainer selected in adminedittrainer.php in a session variable for reuse by adminedittrainer_slave.php
 
 // Determine the trainer's EntityName for the selected TrainerID for use in the heading on this page.
-$db = mysql_connect('localhost', 'paulme6_merlyn', 'fePhaCj64mkik')
+$db = mysql_connect('localhost', 'paulme6_merlyn', '')
 or die('Could not connect: ' . mysql_error());
 mysql_select_db('paulme6_medtrainers') or die('Could not select database: ' . mysql_error());
 
