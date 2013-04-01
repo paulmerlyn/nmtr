@@ -101,9 +101,9 @@ if (isset($_POST['FindEvents']))
 	}
 
 // Connect to DB
-$db = mysql_connect('localhost', 'paulme6_merlyn', 'fePhaCj64mkik')
+$db = mysql_connect('localhost', '', '')
 or die('Could not connect: ' . mysql_error());
-mysql_select_db('paulme6_medtrainers') or die('Could not select database: ' . mysql_error());
+mysql_select_db('') or die('Could not select database: ' . mysql_error());
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
