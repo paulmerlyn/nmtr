@@ -406,7 +406,7 @@ else
 			
 			<?php
 			// Count the number of unallocated username-password pairs from userpass_table. If the number is less than 10, issue a warning in red ink. If the number is zero, disable the 'Add Trainer' button.
-			$db = mysql_connect('localhost', 'paulme6_merlyn', 'fePhaCj64mkik')
+			$db = mysql_connect('localhost', 'paulme6_merlyn', '')
 			or die('Could not connect: ' . mysql_error());
 			mysql_select_db('paulme6_medtrainers') or die('Could not select database: ' . mysql_error());
 
