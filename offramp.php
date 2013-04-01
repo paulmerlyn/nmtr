@@ -10,9 +10,9 @@ offramp.php is the landing page to which the NMTR subscriber is redirected after
 session_start();
 
 /* Connect to DB */
-$db = mysql_connect('localhost', 'paulme6_merlyn', '')
+$db = mysql_connect('localhost', '', '')
 or die('Could not connect: ' . mysql_error());
-mysql_select_db('paulme6_medtrainers') or die('Could not select database: ' . mysql_error());
+mysql_select_db('') or die('Could not select database: ' . mysql_error());
 
 // read the post from PayPal system and add 'cmd'
 $req = 'cmd=_notify-synch';
