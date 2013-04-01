@@ -438,7 +438,7 @@ if (isset($LogIn) || isset($_SESSION['SentBackBySlave'])) // The user has reache
 		}
 	
 	// Examine trainers_table to be sure such a username-password pair exists
-	$db = mysql_connect('localhost', 'paulme6_merlyn', 'fePhaCj64mkik')
+	$db = mysql_connect('localhost', 'paulme6_merlyn', '')
 	or die('Could not connect: ' . mysql_error());
 	mysql_select_db('paulme6_medtrainers') or die('Could not select database: ' . mysql_error());
 
