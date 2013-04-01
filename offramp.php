@@ -10,7 +10,7 @@ offramp.php is the landing page to which the NMTR subscriber is redirected after
 session_start();
 
 /* Connect to DB */
-$db = mysql_connect('localhost', 'paulme6_merlyn', 'fePhaCj64mkik')
+$db = mysql_connect('localhost', 'paulme6_merlyn', '')
 or die('Could not connect: ' . mysql_error());
 mysql_select_db('paulme6_medtrainers') or die('Could not select database: ' . mysql_error());
 
